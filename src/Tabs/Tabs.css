@@ -1,0 +1,28 @@
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #2a2a2a;
+}
+
+table {
+  border: 1px solid blue;
+}
+
+td {
+  padding: 8px 0;
+  width: 70px;
+  text-align: center;
+  color: #2a2a2a;
+
+  &:not(:last-child) {
+    border-right: 1px solid blue;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 0;
+    width: 160px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
