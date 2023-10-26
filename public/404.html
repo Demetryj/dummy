@@ -11,13 +11,12 @@
         // Check if a saved path exists in localStorage
         var savedPath = localStorage.getItem('savedPath');
 
-        if (savedPath) {
-          // Redirect to the saved path
+        if (savedPath && savedPath !== currentPath) {
+          // Redirect to the saved path if it's different from the current path
           window.location.href = savedPath;
         } else {
-          // If no saved path, store the current path and redirect to the main page
+          // If no saved path or it's the same as the current path, update the saved path
           localStorage.setItem('savedPath', currentPath);
-          window.location.href = '/';
         }
       } else {
         // If localStorage is not supported, simply redirect to the main page
